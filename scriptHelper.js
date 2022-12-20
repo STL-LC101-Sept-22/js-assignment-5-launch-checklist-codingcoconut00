@@ -18,6 +18,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 function validateInput(testInput) {
     let numberInput = Number(testInput);
+    //testInput is used in first 2 if statements bc it contains the users string(word) input
+
    if (testInput === "")
    {
        return "Empty";
@@ -26,6 +28,8 @@ function validateInput(testInput) {
    {
        return "Not a Number";
    }
+    //numberInput is passed in here bc the variable holds both the string and number input
+
    else if (isNaN(numberInput) === false)
    {
        return "Is a Number";
@@ -34,7 +38,9 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    let fuel = document.getElementById("fuelStatus");
+   
+// all the info needed for the form to be correctly submitted and validated is passed into formsubmission
+    //the function contains shuttle requirements let fuel = document.getElementById("fuelStatus");
    let cargo = document.getElementById("cargoStatus");
    let pilotStatus = document.getElementById("pilotStatus");
    let copilotStatus = document.getElementById("copilotStatus");

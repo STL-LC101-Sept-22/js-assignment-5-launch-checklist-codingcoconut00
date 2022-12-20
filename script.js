@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
 
    let listedPlanets;
    
-   // Set listedPlanetsResponse equal to the value returned by calling myFetch()
+   // Set listedPlanetsResponse equal to the return call for myFetch()
    let listedPlanetsResponse = myFetch();
     listedPlanetsResponse.then(function (result) {
        listedPlanets = result;
@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
        console.log(listedPlanets);
        let selectedPlanet = pickPlanet(listedPlanets);
        addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diameter, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moons, selectedPlanet.image);  
-       // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
+     // call both addplanet & form submission from within addevenlistener
    })
    let list = document.getElementById("faultyItems");
     list.style.visibility = "hidden";
