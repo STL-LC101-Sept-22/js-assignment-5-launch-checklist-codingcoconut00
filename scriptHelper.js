@@ -42,6 +42,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 // all the info needed for the form to be correctly submitted and validated is passed into formsubmission
     //the function contains shuttle requirements let fuel = document.getElementById("fuelStatus");
    let cargo = document.getElementById("cargoStatus");
+   let fuel= document.getElementById("fuelLevel");
    let pilotStatus = document.getElementById("pilotStatus");
    let copilotStatus = document.getElementById("copilotStatus");
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
